@@ -13,7 +13,15 @@ public class HashMapNation {
 		
 		while(true) {
 			System.out.print("인구 검색 >> ");
-			
+			String sp = "그만";
+			String name = scanner.next();
+			if(name.equals(sp)) {
+				break;
+			}else if(name.equals(nations.keySet())){
+				System.out.println(nations.keySet() + "의 인구는 " + nations.values());
+			}else {
+				System.out.println(nations.keySet() + "나라는 없습니다.");
+			}
 		}
 		
 		scanner.close();
