@@ -4,11 +4,17 @@ public class HashMapNation {
 	public static void main(String[] args) {
 		HashMap<String, Integer> nations = new HashMap<String, Integer>();
 		Scanner scanner = new Scanner(System.in);
-		
+
 		System.out.println("나라 이름과 인구를 10개 입력하세요.(예: Korea 5000)");
 		while(true) { // "그만"이 입력될 때까지 반복
-			System.out.print("나라 이름, 인구 >> ");		
-			
+			System.out.print("나라 이름, 인구 >> ");
+			String key = scanner.next();
+			if(key.equals("그만")) {
+				break;
+			}
+			Integer value = scanner.nextInt();
+			nations.put(key, value);
+			scanner.nextLine();
 		}
 		
 		while(true) {
@@ -22,6 +28,8 @@ public class HashMapNation {
 			}else {
 				System.out.println(nations.keySet() + "나라는 없습니다.");
 			}
+
+			
 		}
 		
 		scanner.close();
