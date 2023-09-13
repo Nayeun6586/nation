@@ -23,10 +23,10 @@ public class HashMapNation {
 			String name = scanner.next();
 			if(name.equals(sp)) {
 				break;
-			}else if(name.equals(nations.keySet())){
-				System.out.println(nations.keySet() + "의 인구는 " + nations.values());
+			}else if(nations.containsKey(name)){
+				System.out.println(name + "의 인구는 " + nations.get(name));
 			}else {
-				System.out.println(nations.keySet() + "나라는 없습니다.");
+				System.out.println(name + "나라는 없습니다.");
 			}
 
 			
